@@ -1,0 +1,79 @@
+<!-- <div>
+  <h1 class="text-success" *ngIf="users.length > 0">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let user of users">{{ user }}</li>
+    </ul>
+  </h1>
+</div>
+<div>
+  <h1 class="text-danger" *ngIf="users.length == 0">no user here</h1>
+</div> -->
+<!-- <div *ngIf="users.length > 0; then userList; else NouserList"></div>
+<ng-template #userList>
+  <ul class="list-group">
+    <li
+      class="list-group-item mt-2"
+      *ngFor="let user of users; 
+      even as isEven;
+       index as i;
+       odd is isOdd;
+       first as isFirst;
+       last as islast"
+    >
+      <span class="badge badge-dark p-2 mr-2">{{ i + 1 }}</span>
+      {{ user }}
+      <span class="badge badge-success float-right" *ngIf="isEven">even</span>
+      <span class="badge badge-success float-right" *ngIf="isOdd">odd</span>
+    </li>
+  </ul>
+</ng-template>
+<ng-template #NouserList>
+  <h1 class="text-danger">no user found</h1>
+</ng-template> -->
+<!-- <div [hidden]="users.length == 0">hello hidden here</div>
+<ng-template #userList>just user here</ng-template> -->
+<!-- <span [ngSwitch]="color"
+  ><p *ngSwitchcase="'red'"><span class="text-danger">red color here</span></p>
+  <p *ngSwitchCase="'green'">
+    <span class="text-success">green color here</span>
+  </p>
+  <p *ngSwitchDefault><span class="text-dark">no color display</span></p></span
+> -->
+<!-- <button [ngClass]="'btn btn-dark'">DARK</button> -->
+<!--string way-->
+<!-- <button [ngClass]="['btn', 'btn-success']">success</button> -->
+<!--array way-->
+<!-- <button [ngClass]="{ btn: true, 'btn-danger': true }">danger</button> -->
+<!--object way-->
+<!-- <div class="container">
+  <button (click)="toggleState()">submit</button>
+  <div [ngClass]="dynamicCSS()">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, culpa
+    officiis, libero alias repellat officia totam distinctio, reprehenderit
+    dolore quisquam repudiandae ea vero. Culpa, maiores deleniti? Non rerum eius
+    dolores.
+  </div>
+</div> -->
+<!-- <div class="container">
+  <ul class="list-group">
+    <li
+      anu
+      class="list-group-item mt-2"
+      *ngFor="let x of user"
+      [ngStyle]="{ color: x.gender === 'female' ? 'pink' : 'bluec' }"
+    >
+      name: {{ x.name }} age:{{ x.age }} gender:{{ x.gender }} country:{{
+        x.country
+      }}
+    </li>
+  </ul>
+</div> -->
+<div class="container">
+  <div class="form" anu>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptate
+    perferendis impedit architecto facere. Earum maxime sequi, harum quae odit
+    ratione nobis, delectus incidunt consectetur debitis blanditiis quasi modi?
+    Consequatur, voluptatibus. Esse nemo maxime recusandae iure magnam, repellat
+    voluptate culpa.
+  </div>
+</div>

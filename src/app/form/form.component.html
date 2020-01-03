@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="col-md-4 offset-4 mt-2 card">
+    <div class="card-body">
+      <h1 class="display-5 text-center text-uppercase">FORM</h1>
+      <form #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="form-group">
+          <label for="username">username</label>
+          <input
+            ngModel
+            #username="ngModel"
+            type="text"
+            name="username"
+            class="form-control"
+            id="username"
+            required
+            placeholder="user name"
+          />
+        </div>
+        <div
+          *ngIf="username.touched && username.invalid"
+          class=" text-danger mt-2"
+        >
+          <p *ngIf="username.errors.required">user name required</p>
+        </div>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input
+            ngModel
+            #email="ngModel"
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            required
+            placeholder="email"
+          />
+        </div>
+        <div *ngIf="email.touched && email.invalid" class=" text-danger mt-2">
+          <p *ngIf="email.errors.required">email required</p>
+        </div>
+
+        <div class="form-group">
+          <label for="password">password</label>
+          <input
+            ngModel
+            #password="ngModel"
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            required
+            placeholder="password"
+          />
+        </div>
+        <div
+          *ngIf="password.touched && password.invalid"
+          class=" text-danger mt-2"
+        >
+          <p *ngIf="password.errors.required">password required</p>
+        </div>
+
+        <div class="form-group">
+          <label *ngFor="let gender of genderlist">
+            <input
+              type="radio"
+              ngModel
+              name="gender"
+              value="{{ gender.name }}"
+              required
+            />
+            {{ gender.name }}</label
+          >
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            ngModel
+            #phone="ngModel"
+            type="text"
+            id="phone"
+            class="form-control"
+            required
+            name="phone"
+            placeholder="phone number"
+          />
+        </div>
+        <div *ngIf="phone.touched && phone.invalid" class=" text-danger mt-2">
+          <p *ngIf="phone.errors.required">phonenumber required</p>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Conntry</label
+          ><select name="country" id="country" class="form-control" required>
+            <option
+              *ngFor="let country of countryList; index as i"
+              ngValue="i"
+              >{{ country }}</option
+            >
+          </select>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" [disabled]="!form.valid">
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

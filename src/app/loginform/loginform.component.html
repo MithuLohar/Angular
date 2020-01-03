@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="col-md-4 0ffset-4 mt-2 card">
+    <div class="card-body">
+      <h1 class="display-5 text-center text-uppercase">register</h1>
+      <form #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="from-group">
+          <label for="username">username</label>
+          <input
+            ngModel
+            #username="ngModel"
+            (change)="log(username)"
+            type="text"
+            id="username"
+            class="form-control"
+            name="username"
+            placeholder="enter name"
+            required
+            minlength="3"
+            maxlength="10"
+            pattern="[A-Za-z0-9]+"
+          />
+        </div>
+        <div
+          *ngIf="username.touched && username.invalid"
+          class=" text-danger mt-2"
+        >
+          <!--validation-->
+          <p *ngIf="username.errors.required">user name required</p>
+          <p *ngIf="username.errors.minlength">
+            username should be min 3 character
+          </p>
+          <p *ngIf="username.errors.maxlength">
+            username should be max 1o character
+          </p>
+
+          <p *ngIf="username.errors.pattern">username sould match</p>
+        </div>
+        <div class="from-group">
+          <label for="password">password</label>
+          <input
+            ngModel
+            type="password"
+            id="password"
+            class="form-control"
+            name="password"
+            placeholder="enter password"
+            required
+            minlength="3"
+            pattern="jspiders"
+            #password="ngModel"
+          />
+        </div>
+        <div
+          *ngIf="password.touched && username.invalid"
+          class="alert alert-danger text-danger mt-2"
+        >
+          <!--validation-->
+          <p *ngIf="password.errors.required">password required</p>
+          <p *ngIf="password.errors.minlength">
+            password should be min 3 character
+          </p>
+
+          <p *ngIf="password.errors.pattern">password sould match</p>
+        </div>
+        <hr class="" />
+        <div class="form-group">
+          <button class="btn btn-success btn-block" [disabled]="!form.valid">
+            login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

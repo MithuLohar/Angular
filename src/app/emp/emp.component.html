@@ -1,0 +1,87 @@
+<!-- <ul class="list-group" *ngFor="let emp of employee">
+  <li class="list-group-item mt-2">EmpId:{{ emp.emp_id }}</li>
+  <li class="list-group-item mt-2">
+    <img src="{{ emp.emp_photo }}" alt="" />
+  </li>
+  <li class="list-group-item mt-2">EmpName:{{ emp.emp_name }}</li>
+  <li class="list-group-item mt-2">
+    Emp_designation:{{ employee.emp_designation }}
+  </li>
+  <li class="list-group-item mt-2">emp salary:{{ emp.emp_salary }}</li>
+  <li class="list-group-item mt-2">Emp Location:{{ emp.emp_location }}</li>
+  <li class="list-group-item mt-2">
+    Emp Education:{{ emp.emp_emp_education }}
+  </li>
+  <li class="list-group-item mt-2">emp date of join:{{ emp.emp_DOJ }}</li>
+</ul> -->
+
+<!-- <img [src]="imgurl" />
+<br />
+<hr />
+<button class="btn btn-warning mt-2" [class.active]="isActive">submit</button> -->
+<!-- 
+<table>
+  <tr>
+    <td [attr.colspan]="colSpan">colspan here</td>
+    <td>colspan here</td>
+  </tr>
+</table> -->
+
+<!-- <div [style.backgroundColor]="isActive ? 'red' : 'green'">
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, provident!
+</div> -->
+<!-- <button (click)="click($event)">submit</button> -->
+<!-- 
+<input
+  type="text"
+  name=""
+  id="name"
+  class="form-control mt-2"
+  placeholder="enter a key"
+  (keyup.enter)="username($event)"
+/>
+<input
+  type="text"
+  class="form-control mt-2"
+  id="email"
+  name=""
+  placeholder="enter email"
+  #email
+  (keyup.enter)="enteremail(email.value)"
+/>angular method -->
+
+<input
+  type="text"
+  class="form-control mt-2"
+  placeholder="enter name"
+  [(ngModel)]="username"
+/>
+<input
+  type="text"
+  class="form-control mt-2"
+  placeholder="enter email"
+  [(ngModel)]="email"
+/>
+<input
+  type="text"
+  class="form-control mt-2"
+  placeholder="enter phone number"
+  [(ngModel)]="phonenumber"
+/>
+<textarea
+  name=""
+  id=""
+  cols="30"
+  rows="10"
+  class="form-control mt-2"
+  placeholder="description"
+  [(ngModel)]="description"
+></textarea>
+<h1>{{ username }}</h1>
+<h1>{{ email }}</h1>
+<h1>{{ phonenumber }}</h1>
+<p>{{ description }}</p>
+
+<!-- <h1>{{ username }}</h1> -->
+<!--ngModel only works with forms elements-->
+<!--to use ngModel directive should import FormModule in app.module.ts-->

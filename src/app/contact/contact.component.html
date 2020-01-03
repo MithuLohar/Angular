@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="col-md-4 card mt-2 offset-4">
+    <div class="card-body">
+      <h1 class="text-uppercase display-6 text-center">contact form</h1>
+      <form [formGroup]="contactForm">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="name"
+            formControlName="name"
+          />
+        </div>
+        <div class="text-danger" *ngIf="name.touched && name.invalid">
+          <p *ngIf="name.errors.required">please enter name</p>
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="email"
+            formControlName="email"
+          />
+        </div>
+        <div class="text-danger" *ngIf="email.touched && email.invalid">
+          <p *ngIf="email.errors.required">please give emailID</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success btn-block mt-2">contact form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="col-md-8 offset-2 mt-2">
+    <div class="form-group">
+      <h1
+        class="display-5 mt-2 text-uppercase text-success text-center font-weight-bold"
+      >
+        FIND PLAYERS
+      </h1>
+      <input
+        type="text"
+        class="bg-light form-control text-center"
+        placeholder="Search Cricket players😄"
+        #pid
+        (keyup.enter)="searchPlayer(pid.value)"
+      />
+    </div>
+  </div>
+  <!-- <ul class="list-group">
+    <li class="list-group-item mt-2" *ngFor="let player of playerInfo">
+      <span class="badge badge-primary ml-4 mr-4">Player Name:</span>
+      <span class="text-dark font-weight-bold">{{ player.fullName }}</span>
+    </li>
+  </ul> -->
+</div>
